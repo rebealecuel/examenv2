@@ -14,24 +14,30 @@ namespace examenv2
         }
         static void Main(string[] args)
         {
+            //Rebeca Alejandra Cuellar Angel
+            acciones acc = new acciones();
             while (true)
             {
                 switch (Menu())
                 {
                     case Menun.Agregar:
-
+                        acc.agregarpeli();
                         break;
                     case Menun.mostrar:
-
+                        acc.Mostarte();
                         break;
                     case Menun.contar:
-
+                        Console.WriteLine( acc.COntar());
                         break;
                     case Menun.eliminar:
-
+                        Console.WriteLine("Dame la pelicula a eliminar");
+                        string peli = Console.ReadLine();
+                        acc.Elimina(peli);
                         break;
                     case Menun.actualizar:
-
+                        Console.WriteLine("Dame la pelicula a actualizar");
+                        string pelia = Console.ReadLine();
+                        acc.Actuli(pelia);
                         break;
                     case Menun.salir:
                         Environment.Exit(0);
